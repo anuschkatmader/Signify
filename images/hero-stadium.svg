@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640">
+          <defs><radialGradient id="flood" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e8fff7"/><stop offset=".3" stop-color="#14d3be" stop-opacity=".55"/><stop offset="1" stop-color="#14d3be" stop-opacity="0"/></radialGradient>
+          <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00e487"/><stop offset="1" stop-color="#067a5a"/></linearGradient></defs>
+          <rect width="1440" height="640" fill="#0a2530"/>
+          <path d="M360 640 620 410h640l180 110v120Z" fill="url(#pitch)"/>
+          <path d="M930 410v230M775 525h340l40 115H740Z" fill="none" stroke="#e8fff7" stroke-width="4" opacity=".75"/>
+          <path d="M250 640 600 330h670l170 100v-90L1280 250H570L150 640Z" fill="#123a45"/>
+          <g fill="url(#flood)"><circle cx="640" cy="190" r="170"/><circle cx="930" cy="150" r="190"/><circle cx="1230" cy="190" r="170"/></g>
+          <g stroke="#031118" stroke-width="7"><path d="M640 330V180M930 330V140M1230 330V180"/></g>
+          <g fill="#e8fff7"><rect x="600" y="160" width="80" height="26" rx="4"/><rect x="885" y="120" width="90" height="28" rx="4"/><rect x="1190" y="160" width="80" height="26" rx="4"/></g>
+        </svg>

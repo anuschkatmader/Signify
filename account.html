@@ -1,0 +1,233 @@
+<!doctype html>
+<!--
+  DEMO ENVIRONMENT, not affiliated with Signify.
+  Consent concept for a OneTrust UCPM / CMP walkthrough. Fictional persona and data only.
+  It is a labelled concept, not a copy of a Signify website: it carries no Signify logo,
+  no Signify photography, no login and no password fields. Keep the demo strip in place.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>My account, Signify consent concept (demo)</title>
+
+<!-- All OneTrust IDs and switches live in js/onetrust-config.js -->
+<script src="js/onetrust-config.js"></script>
+
+<!-- Cookie banner (CMP). Keep commented out until the IDs exist, then set both REPLACE values.
+<script src="REPLACE_WITH_otSDKStub.js_URL" type="text/javascript" charset="UTF-8"
+        data-domain-script="REPLACE_WITH_DOMAIN_SCRIPT_ID"></script>
+<script type="text/javascript">function OptanonWrapper() { }</script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<div class="strip" role="note">
+  <div class="wrap">
+    <span><strong>Demo environment.</strong> Consent concept prepared for Signify. Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
+    <span class="strip-tools">
+      <button type="button" data-act="replay-cookie">Show cookie banner</button>
+      <button type="button" data-act="replay-popup">Show pop-up</button>
+      <button type="button" data-act="reset">Reset demo</button>
+    </span>
+  </div>
+</div>
+
+<div class="utility">
+  <div class="wrap">
+    <span class="market">Global - English</span>
+    <a class="sub" href="#" data-dead>Careers</a>
+    <a class="sub" href="#" data-dead>Investors</a>
+    <button type="button" data-act="replay-popup">Subscribe to newsletter</button>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signify<small>Consent concept</small></a>
+    <nav class="primary" aria-label="Main">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#applications">Applications</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="index.html#sustainability">Sustainability</a>
+      <a href="#" data-dead>Our company</a>
+    </nav>
+    <div class="head-tools">
+      <button type="button" class="icon-btn" data-dead aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+      <a class="account-link" href="#account" aria-label="My account, Anuschka Mader"><span class="avatar" aria-hidden="true">AM</span><span class="nm">Anuschka Mader</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="view on" id="view-account">
+    <div class="wrap account">
+      <div class="account-head">
+        <h1>Hello, Anuschka</h1>
+        <p>Demo persona: lighting designer at Studio Northlight (fictional).</p>
+      </div>
+      <div class="account-grid">
+        <nav class="side" aria-label="Account">
+          <a href="#account">Overview</a>
+          <a href="#orders">Orders</a>
+          <a href="#projects">Projects</a>
+          <a href="#addresses">Addresses</a>
+          <a href="#profile">Profile</a>
+          <a href="#preferences">Communication preferences</a>
+        </nav>
+        <div>
+          <div class="panel" id="panel-account">
+            <h2>Overview</h2>
+            <p class="intro">Your latest order, and what you've chosen to hear about.</p>
+            <div class="twoup">
+              <div class="sheet"><h3>Latest order</h3><p>SN-204518, placed 21 October 2026</p><p style="margin-top:8px"><span class="pill">In transit</span></p></div>
+              <div class="sheet"><h3>Newsletter consent</h3><p id="ov-consent-text">You haven't answered yet.</p><p style="margin-top:8px"><span class="pill" id="ov-consent">To review</span></p></div>
+            </div>
+            <div class="sheet"><h3>Communication preferences</h3><p id="ov-summary"></p><p style="margin-top:12px"><a class="btn ghost" href="#preferences">Change preferences</a></p></div>
+          </div>
+
+          <div class="panel" id="panel-orders">
+            <h2>Orders</h2><p class="intro">Fictional orders for this demo.</p>
+            <div class="sheet scroll"><table>
+              <thead><tr><th>Order</th><th>Date</th><th>Project</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>SN-204518</td><td>21 Oct 2026</td><td>Harbour office refit</td><td><span class="pill">In transit</span></td></tr>
+                <tr><td>SN-203977</td><td>2 Sep 2026</td><td>School sports hall</td><td><span class="pill ok">Delivered</span></td></tr>
+                <tr><td>SN-202640</td><td>11 Jun 2026</td><td>Harbour office refit</td><td><span class="pill ok">Delivered</span></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div class="panel" id="panel-projects">
+            <h2>Projects</h2><p class="intro">Saved lighting projects and their warranty dates.</p>
+            <div class="sheet scroll"><table>
+              <thead><tr><th>Project</th><th>Sector</th><th>Warranty until</th></tr></thead>
+              <tbody>
+                <tr><td>Harbour office refit</td><td>Office</td><td>June 2031</td></tr>
+                <tr><td>School sports hall</td><td>Education</td><td>September 2031</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div class="panel" id="panel-addresses">
+            <h2>Addresses</h2><p class="intro">Where we send deliveries and invoices.</p>
+            <div class="twoup">
+              <div class="sheet"><h3>Delivery</h3><p>Studio Northlight<br>12 Example Street<br>00000 Demo City</p></div>
+              <div class="sheet"><h3>Invoices</h3><p>Studio Northlight, Accounts<br>12 Example Street<br>00000 Demo City</p></div>
+            </div>
+          </div>
+
+          <div class="panel" id="panel-profile">
+            <h2>Profile</h2><p class="intro">Everything here is fictional.</p>
+            <div class="sheet"><dl class="facts">
+              <dt>Name</dt><dd>Anuschka Mader</dd>
+              <dt>Email</dt><dd>anuschka.mader@example.com</dd>
+              <dt>Company</dt><dd>Studio Northlight</dd>
+              <dt>Role</dt><dd>Lighting designer</dd>
+              <dt>Language</dt><dd>English</dd>
+            </dl></div>
+          </div>
+
+          <div class="panel" id="panel-preferences">
+            <h2>Communication preferences</h2>
+            <p class="intro">Turn each topic on or off, then set how often you hear from us. Service messages about your orders and warranties always reach you.</p>
+            <!-- Optional OneTrust preference centre embed. It stays hidden until something renders into it. -->
+            <div id="ot-pref-center"></div>
+            <div id="purposes"></div>
+            <div class="save-bar">
+              <span id="save-state" role="status">No unsaved changes</span>
+              <span class="acts">
+                <button type="button" class="btn ghost" id="optout-all">Turn off all marketing</button>
+                <button type="button" class="btn glow" id="save-prefs" disabled>Save preferences</button>
+              </span>
+            </div>
+            <div class="sheet">
+              <h3>Consent history</h3>
+              <p style="color:var(--steel);margin-bottom:10px">Every change is recorded with the date and where you made it.</p>
+              <div class="scroll"><table>
+                <thead><tr><th>Date</th><th>Topic</th><th>Change</th><th>Made in</th></tr></thead>
+                <tbody id="receipts"></tbody>
+              </table></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</main>
+
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h3>Explore</h3><a href="index.html#products">Products</a><a href="index.html#applications">Applications</a><a href="index.html#resources">Resources</a><a href="#" data-dead>Signify Services</a></div>
+      <div><h3>Impact</h3><a href="#" data-dead>Innovation</a><a href="index.html#sustainability">Sustainability</a><a href="#" data-dead>Financial statements</a></div>
+      <div><h3>Your account</h3><a href="#account">Overview</a><a href="#orders">Orders</a><a href="#preferences">Communication preferences</a></div>
+      <div><h3>Your privacy</h3><a id="ot-sdk-btn" class="ot-sdk-show-settings" href="#">Cookie Settings</a></div>
+    </div>
+    <div class="foot-note">
+      <a href="#" data-dead>Site owner</a><a href="#" data-dead>Cookie notice</a><a href="#" data-dead>Privacy notice</a><a href="#" data-dead>Terms of use</a><a href="#" data-dead>Product security</a>
+      <span>Demo environment, not affiliated with Signify. All names, orders and addresses are fictional.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- Built-in demo cookie banner. It hides itself once the real OneTrust banner is detected. -->
+<div class="modal" id="cookie" role="dialog" aria-modal="true" aria-labelledby="cookie-title" inert>
+  <h2 id="cookie-title">Choose your cookies</h2>
+  <p>We use necessary cookies to run this site. With your permission we also use cookies to measure visits and show relevant content. You can change this at any time under Cookie Settings in the footer.</p>
+  <div id="cookie-manage">
+    <div class="cat"><div><b>Strictly necessary</b><span class="d">Always on. The site needs these to work.</span></div><label class="switch"><input type="checkbox" checked disabled aria-label="Strictly necessary cookies"><span></span></label></div>
+    <div class="cat"><div><b>Performance</b><span class="d">Count visits and see which pages are used.</span></div><label class="switch"><input type="checkbox" id="cat-C0002" aria-label="Performance cookies"><span></span></label></div>
+    <div class="cat"><div><b>Functional</b><span class="d">Remember your country and language.</span></div><label class="switch"><input type="checkbox" id="cat-C0003" aria-label="Functional cookies"><span></span></label></div>
+    <div class="cat"><div><b>Targeting</b><span class="d">Show relevant content on other sites.</span></div><label class="switch"><input type="checkbox" id="cat-C0004" aria-label="Targeting cookies"><span></span></label></div>
+  </div>
+  <div class="cookie-acts">
+    <button type="button" class="btn ghost" id="ck-manage">Manage cookies</button>
+    <button type="button" class="btn ghost" id="ck-reject">Reject all</button>
+    <button type="button" class="btn glow" id="ck-accept">Accept all</button>
+  </div>
+</div>
+
+<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. The fallback form shows until it does. -->
+<div class="modal" id="signup" role="dialog" aria-modal="true" aria-labelledby="signup-title" inert>
+  <div class="signup-art">
+    <h2 id="signup-title">Be the first!</h2>
+    <p>New products, training dates and regulation updates. Choose your topics now, and change them whenever you like.</p>
+  </div>
+  <div class="signup-body">
+    <button type="button" class="close" id="signup-close" aria-label="Close pop-up">×</button>
+    <div id="ot-container"></div>
+    <form id="fallback-form">
+      <div class="fields-two">
+        <div class="field"><label for="f-name">First name</label><input id="f-name" name="firstName" autocomplete="off" value="Anuschka" required></div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="off" value="anuschka.mader@example.com" required></div>
+      </div>
+      <div class="field"><label for="f-role">Your role</label>
+        <select id="f-role" name="role"><option>Lighting designer or engineer</option><option>System integrator</option><option>Installer or wholesaler</option><option>Facility or building manager</option></select>
+      </div>
+      <label class="check"><input type="checkbox" id="f-consent" name="consent" required><span>Send me Signify product news and event invitations by email. I can opt out at any time.</span></label>
+      <button class="btn glow" type="submit">Subscribe</button>
+      <p class="fineprint">Demo form. It stands in for the OneTrust web form.</p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Dummy tags for the CMP auto-blocking demo. They only log to the console.
+     Inert until the matching category is allowed. With the real CMP live, OneTrust activates them itself. -->
+<script type="text/plain" class="optanon-category-C0002" data-demo-tag>console.log("[Demo analytics] page view recorded (dummy tag, category C0002)");</script>
+<script type="text/plain" class="optanon-category-C0004" data-demo-tag>console.log("[Demo ads] advertising pixel fired (dummy tag, category C0004)");</script>
+
+<script src="js/site.js"></script>
+</body>
+</html>

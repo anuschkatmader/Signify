@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2530"/><stop offset=".78" stop-color="#0f4a55"/><stop offset="1" stop-color="#0f7a78"/></linearGradient>
+            <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4fff0" stop-opacity=".9"/><stop offset="1" stop-color="#14d3be" stop-opacity=".05"/></linearGradient>
+            <radialGradient id="pool"><stop offset="0" stop-color="#7bf7cb" stop-opacity=".8"/><stop offset="1" stop-color="#00e487" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="1440" height="640" fill="url(#sky)"/>
+          <g fill="#07202a"><rect x="0" y="480" width="210" height="90"/><rect x="210" y="440" width="150" height="130"/><rect x="360" y="500" width="170" height="70"/><rect x="530" y="420" width="110" height="150"/><rect x="640" y="330" width="120" height="240"/><rect x="760" y="285" width="90" height="285"/><rect x="850" y="350" width="150" height="220"/><rect x="1000" y="255" width="110" height="315"/><rect x="1110" y="325" width="130" height="245"/><rect x="1240" y="280" width="200" height="290"/></g>
+          <rect y="568" width="1440" height="72" fill="#051821"/>
+          <polygon points="700,312 738,312 815,578 625,578" fill="url(#beam)"/><ellipse cx="720" cy="585" rx="150" ry="20" fill="url(#pool)"/>
+          <polygon points="908,272 952,272 1050,578 810,578" fill="url(#beam)"/><ellipse cx="930" cy="587" rx="175" ry="22" fill="url(#pool)"/>
+          <polygon points="1132,230 1184,230 1302,578 1012,578" fill="url(#beam)"/><ellipse cx="1158" cy="590" rx="200" ry="24" fill="url(#pool)"/>
+          <polygon points="1382,186 1440,186 1440,578 1248,578" fill="url(#beam)"/><ellipse cx="1400" cy="594" rx="225" ry="26" fill="url(#pool)"/>
+          <g stroke="#031118" fill="none" stroke-linecap="round"><path d="M760 572V306q0-10-10-10h-34" stroke-width="5"/><path d="M976 572V266q0-12-12-12h-38" stroke-width="6"/><path d="M1212 572V226q0-14-14-14h-44" stroke-width="7"/><path d="M1432 572V180q0-16-16-16h-20" stroke-width="8"/></g>
+          <g fill="#031118"><rect x="696" y="292" width="44" height="9" rx="4"/><rect x="904" y="250" width="50" height="10" rx="4"/><rect x="1130" y="208" width="56" height="11" rx="5"/><rect x="1380" y="160" width="60" height="13" rx="5"/></g>
+        </svg>

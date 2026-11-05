@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640">
+          <defs><pattern id="win" width="62" height="58" patternUnits="userSpaceOnUse"><rect x="7" y="7" width="48" height="44" fill="#14d3be" opacity=".85"/></pattern>
+          <pattern id="win2" width="62" height="58" patternUnits="userSpaceOnUse"><rect x="7" y="7" width="48" height="44" fill="#00e487" opacity=".35"/></pattern>
+          <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2530" stop-opacity="0"/><stop offset="1" stop-color="#0a2530"/></linearGradient></defs>
+          <rect width="1440" height="640" fill="#0a2530"/>
+          <rect x="600" y="60" width="840" height="580" fill="#0f3a45"/>
+          <rect x="600" y="60" width="840" height="580" fill="url(#win2)"/>
+          <rect x="786" y="176" width="372" height="232" fill="url(#win)"/>
+          <rect x="1158" y="292" width="248" height="174" fill="url(#win)"/>
+          <rect x="600" y="440" width="840" height="200" fill="url(#fade)"/>
+        </svg>

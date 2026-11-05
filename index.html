@@ -1,0 +1,215 @@
+<!doctype html>
+<!--
+  DEMO ENVIRONMENT, not affiliated with Signify.
+  Consent concept for a OneTrust UCPM / CMP walkthrough. Fictional persona and data only.
+  It is a labelled concept, not a copy of a Signify website: it carries no Signify logo,
+  no Signify photography, no login and no password fields. Keep the demo strip in place.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Signify consent concept (demo)</title>
+
+<!-- All OneTrust IDs and switches live in js/onetrust-config.js -->
+<script src="js/onetrust-config.js"></script>
+
+<!-- Cookie banner (CMP). Keep commented out until the IDs exist, then set both REPLACE values.
+<script src="REPLACE_WITH_otSDKStub.js_URL" type="text/javascript" charset="UTF-8"
+        data-domain-script="REPLACE_WITH_DOMAIN_SCRIPT_ID"></script>
+<script type="text/javascript">function OptanonWrapper() { }</script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<div class="strip" role="note">
+  <div class="wrap">
+    <span><strong>Demo environment.</strong> Consent concept prepared for Signify. Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
+    <span class="strip-tools">
+      <button type="button" data-act="replay-cookie">Show cookie banner</button>
+      <button type="button" data-act="replay-popup">Show pop-up</button>
+      <button type="button" data-act="reset">Reset demo</button>
+    </span>
+  </div>
+</div>
+
+<div class="utility">
+  <div class="wrap">
+    <span class="market">Global - English</span>
+    <a class="sub" href="#" data-dead>Careers</a>
+    <a class="sub" href="#" data-dead>Investors</a>
+    <button type="button" data-act="replay-popup">Subscribe to newsletter</button>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signify<small>Consent concept</small></a>
+    <nav class="primary" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#applications">Applications</a>
+      <a href="#resources">Resources</a>
+      <a href="#sustainability">Sustainability</a>
+      <a href="#" data-dead>Our company</a>
+    </nav>
+    <div class="head-tools">
+      <button type="button" class="icon-btn" data-dead aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+      <a class="account-link" href="account.html#account" aria-label="My account, Anuschka Mader"><span class="avatar" aria-hidden="true">AM</span><span class="nm">Anuschka Mader</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="view on" id="view-home">
+    <section class="hero" aria-roledescription="carousel" aria-label="Illustrated scenes">
+      <div class="slide on">
+        <img src="images/hero-city.svg" alt="">
+      </div>
+      <div class="slide">
+        <img src="images/hero-stadium.svg" alt="">
+      </div>
+      <div class="slide">
+        <img src="images/hero-offices.svg" alt="">
+      </div>
+      <div class="wrap">
+        <h1>A universe of lights</h1>
+        <div class="cta"><a class="btn glow" href="#products">Discover the portfolio</a></div>
+        <div class="hero-foot">
+          <p id="slide-caption" aria-live="polite">Illustrated scene: cities</p>
+          <div class="dots">
+            <button type="button" aria-label="Scene 1, cities" aria-current="true"></button>
+            <button type="button" aria-label="Scene 2, sports venues"></button>
+            <button type="button" aria-label="Scene 3, offices"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="products">
+      <div class="wrap">
+        <h2>Discover the Signify professional portfolio</h2>
+        <div class="tiles">
+          <a class="tile" href="#" data-dead><img src="images/tile-products.svg" alt=""><div><h3>Products</h3><span>Indoor and outdoor luminaires, lamps, electronics and connected lighting.</span></div></a>
+          <a class="tile" href="#applications"><img src="images/tile-applications.svg" alt=""><div><h3>Applications</h3><span>Solutions for every space, from the office to the stadium.</span></div></a>
+        </div>
+        <div class="tags" id="applications">
+          <a href="#" data-dead>Cities</a><a href="#" data-dead>Education</a><a href="#" data-dead>Healthcare</a><a href="#" data-dead>Hospitality</a><a href="#" data-dead>Manufacturing</a><a href="#" data-dead>Office</a><a href="#" data-dead>Retail</a><a href="#" data-dead>Sports</a><a href="#" data-dead>Transport</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block tinted">
+      <div class="wrap">
+        <div class="head-row">
+          <div><h2>The world's leading lighting brands</h2><p class="lede">Light for homes, buildings and public spaces.</p></div>
+          <a class="btn ghost" href="#" data-dead>See all brands</a>
+        </div>
+        <div class="mosaic">
+          <a href="#" data-dead><img src="images/mosaic-smart-city.svg" alt=""><span>Smart city</span></a><a href="#" data-dead><img src="images/mosaic-retail-atrium.svg" alt=""><span>Retail atrium</span></a><a href="#" data-dead><img src="images/mosaic-facade.svg" alt=""><span>Facade</span></a><a href="#" data-dead><img src="images/mosaic-modern-interior.svg" alt=""><span>Modern interior</span></a><a href="#" data-dead><img src="images/mosaic-home.svg" alt=""><span>Home</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="purposebrand" id="sustainability">
+      <div class="wrap">
+        <h2>Brighter Lives, Better World</h2>
+        <div><p>Lighting that uses less energy and fewer resources, and improves the places where we live and work.</p><a class="btn" href="#" data-dead>Discover our sustainability programme</a></div>
+      </div>
+    </section>
+
+    <section class="block tinted" id="resources">
+      <div class="wrap">
+        <div class="head-row">
+          <h2>Resources for lighting professionals</h2>
+          <a class="btn ghost" href="#" data-dead>Discover all resources</a>
+        </div>
+        <div class="profiles">
+          <a href="#" data-dead><b>Lighting designers, architects and engineers</b><span>Guides, technical data and project tools.</span></a>
+          <a href="#" data-dead><b>System integrators</b><span>Control systems and connectivity.</span></a>
+          <a href="#" data-dead><b>Installers and distributors</b><span>Products, warranties and training.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="a"><h2>Be the first!</h2><p>Launches, training and regulation updates, as often as you choose.</p><button type="button" class="btn glow" data-act="replay-popup">Subscribe to newsletter</button></div>
+      <div class="b"><h2>Starting a project?</h2><p>Tell us your goals and timelines.</p><a class="btn ghost" href="#" data-dead>Let's talk about your project</a></div>
+    </section>
+</div>
+</main>
+
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h3>Explore</h3><a href="#products">Products</a><a href="#applications">Applications</a><a href="#resources">Resources</a><a href="#" data-dead>Signify Services</a></div>
+      <div><h3>Impact</h3><a href="#" data-dead>Innovation</a><a href="#sustainability">Sustainability</a><a href="#" data-dead>Financial statements</a></div>
+      <div><h3>Your account</h3><a href="account.html#account">Overview</a><a href="account.html#orders">Orders</a><a href="account.html#preferences">Communication preferences</a></div>
+      <div><h3>Your privacy</h3><a id="ot-sdk-btn" class="ot-sdk-show-settings" href="#">Cookie Settings</a></div>
+    </div>
+    <div class="foot-note">
+      <a href="#" data-dead>Site owner</a><a href="#" data-dead>Cookie notice</a><a href="#" data-dead>Privacy notice</a><a href="#" data-dead>Terms of use</a><a href="#" data-dead>Product security</a>
+      <span>Demo environment, not affiliated with Signify. All names, orders and addresses are fictional.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- Built-in demo cookie banner. It hides itself once the real OneTrust banner is detected. -->
+<div class="modal" id="cookie" role="dialog" aria-modal="true" aria-labelledby="cookie-title" inert>
+  <h2 id="cookie-title">Choose your cookies</h2>
+  <p>We use necessary cookies to run this site. With your permission we also use cookies to measure visits and show relevant content. You can change this at any time under Cookie Settings in the footer.</p>
+  <div id="cookie-manage">
+    <div class="cat"><div><b>Strictly necessary</b><span class="d">Always on. The site needs these to work.</span></div><label class="switch"><input type="checkbox" checked disabled aria-label="Strictly necessary cookies"><span></span></label></div>
+    <div class="cat"><div><b>Performance</b><span class="d">Count visits and see which pages are used.</span></div><label class="switch"><input type="checkbox" id="cat-C0002" aria-label="Performance cookies"><span></span></label></div>
+    <div class="cat"><div><b>Functional</b><span class="d">Remember your country and language.</span></div><label class="switch"><input type="checkbox" id="cat-C0003" aria-label="Functional cookies"><span></span></label></div>
+    <div class="cat"><div><b>Targeting</b><span class="d">Show relevant content on other sites.</span></div><label class="switch"><input type="checkbox" id="cat-C0004" aria-label="Targeting cookies"><span></span></label></div>
+  </div>
+  <div class="cookie-acts">
+    <button type="button" class="btn ghost" id="ck-manage">Manage cookies</button>
+    <button type="button" class="btn ghost" id="ck-reject">Reject all</button>
+    <button type="button" class="btn glow" id="ck-accept">Accept all</button>
+  </div>
+</div>
+
+<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. The fallback form shows until it does. -->
+<div class="modal" id="signup" role="dialog" aria-modal="true" aria-labelledby="signup-title" inert>
+  <div class="signup-art">
+    <h2 id="signup-title">Be the first!</h2>
+    <p>New products, training dates and regulation updates. Choose your topics now, and change them whenever you like.</p>
+  </div>
+  <div class="signup-body">
+    <button type="button" class="close" id="signup-close" aria-label="Close pop-up">×</button>
+    <div id="ot-container"></div>
+    <form id="fallback-form">
+      <div class="fields-two">
+        <div class="field"><label for="f-name">First name</label><input id="f-name" name="firstName" autocomplete="off" value="Anuschka" required></div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="off" value="anuschka.mader@example.com" required></div>
+      </div>
+      <div class="field"><label for="f-role">Your role</label>
+        <select id="f-role" name="role"><option>Lighting designer or engineer</option><option>System integrator</option><option>Installer or wholesaler</option><option>Facility or building manager</option></select>
+      </div>
+      <label class="check"><input type="checkbox" id="f-consent" name="consent" required><span>Send me Signify product news and event invitations by email. I can opt out at any time.</span></label>
+      <button class="btn glow" type="submit">Subscribe</button>
+      <p class="fineprint">Demo form. It stands in for the OneTrust web form.</p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Dummy tags for the CMP auto-blocking demo. They only log to the console.
+     Inert until the matching category is allowed. With the real CMP live, OneTrust activates them itself. -->
+<script type="text/plain" class="optanon-category-C0002" data-demo-tag>console.log("[Demo analytics] page view recorded (dummy tag, category C0002)");</script>
+<script type="text/plain" class="optanon-category-C0004" data-demo-tag>console.log("[Demo ads] advertising pixel fired (dummy tag, category C0004)");</script>
+
+<script src="js/site.js"></script>
+</body>
+</html>
