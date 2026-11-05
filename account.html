@@ -1,25 +1,18 @@
 <!doctype html>
-<!--
-  DEMO ENVIRONMENT, not affiliated with Signify.
-  Consent concept for a OneTrust UCPM / CMP walkthrough. Fictional persona and data only.
-  It is a labelled concept, not a copy of a Signify website: it carries no Signify logo,
-  no Signify photography, no login and no password fields. Keep the demo strip in place.
--->
+<!-- DEMO ENVIRONMENT, not affiliated with Signify. Fictional persona and data only. -->
 <html lang="en">
 <head>
+<!-- ==================== PASTE THE ONETRUST COOKIE BANNER SCRIPT HERE ==================== -->
+
+<!-- ================================ END ONETRUST SCRIPT ================================ -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>My account, Signify consent concept (demo)</title>
+<title>My account (demo)</title>
 
-<!-- All OneTrust IDs and switches live in js/onetrust-config.js -->
+<!-- Web form IDs and switches live in js/onetrust-config.js -->
 <script src="js/onetrust-config.js"></script>
-
-<!-- Cookie banner (CMP). Keep commented out until the IDs exist, then set both REPLACE values.
-<script src="REPLACE_WITH_otSDKStub.js_URL" type="text/javascript" charset="UTF-8"
-        data-domain-script="REPLACE_WITH_DOMAIN_SCRIPT_ID"></script>
-<script type="text/javascript">function OptanonWrapper() { }</script>
--->
+<script src="js/images.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +23,8 @@
 
 <div class="strip" role="note">
   <div class="wrap">
-    <span><strong>Demo environment.</strong> Consent concept prepared for Signify. Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
+    <span><strong>Demo environment.</strong> Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
     <span class="strip-tools">
-      <button type="button" data-act="replay-cookie">Show cookie banner</button>
-      <button type="button" data-act="replay-popup">Show pop-up</button>
       <button type="button" data-act="reset">Reset demo</button>
     </span>
   </div>
@@ -44,13 +35,13 @@
     <span class="market">Global - English</span>
     <a class="sub" href="#" data-dead>Careers</a>
     <a class="sub" href="#" data-dead>Investors</a>
-    <button type="button" data-act="replay-popup">Subscribe to newsletter</button>
+    <a href="index.html#newsletter">Subscribe to newsletter</a>
   </div>
 </div>
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="index.html">Signify<small>Consent concept</small></a>
+    <a class="brand" href="index.html">Signify</a>
     <nav class="primary" aria-label="Main">
       <a href="index.html#products">Products</a>
       <a href="index.html#applications">Applications</a>
@@ -180,28 +171,11 @@
 
 <div class="scrim" id="scrim"></div>
 
-<!-- Built-in demo cookie banner. It hides itself once the real OneTrust banner is detected. -->
-<div class="modal" id="cookie" role="dialog" aria-modal="true" aria-labelledby="cookie-title" inert>
-  <h2 id="cookie-title">Choose your cookies</h2>
-  <p>We use necessary cookies to run this site. With your permission we also use cookies to measure visits and show relevant content. You can change this at any time under Cookie Settings in the footer.</p>
-  <div id="cookie-manage">
-    <div class="cat"><div><b>Strictly necessary</b><span class="d">Always on. The site needs these to work.</span></div><label class="switch"><input type="checkbox" checked disabled aria-label="Strictly necessary cookies"><span></span></label></div>
-    <div class="cat"><div><b>Performance</b><span class="d">Count visits and see which pages are used.</span></div><label class="switch"><input type="checkbox" id="cat-C0002" aria-label="Performance cookies"><span></span></label></div>
-    <div class="cat"><div><b>Functional</b><span class="d">Remember your country and language.</span></div><label class="switch"><input type="checkbox" id="cat-C0003" aria-label="Functional cookies"><span></span></label></div>
-    <div class="cat"><div><b>Targeting</b><span class="d">Show relevant content on other sites.</span></div><label class="switch"><input type="checkbox" id="cat-C0004" aria-label="Targeting cookies"><span></span></label></div>
-  </div>
-  <div class="cookie-acts">
-    <button type="button" class="btn ghost" id="ck-manage">Manage cookies</button>
-    <button type="button" class="btn ghost" id="ck-reject">Reject all</button>
-    <button type="button" class="btn glow" id="ck-accept">Accept all</button>
-  </div>
-</div>
-
-<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. The fallback form shows until it does. -->
+<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. -->
 <div class="modal" id="signup" role="dialog" aria-modal="true" aria-labelledby="signup-title" inert>
   <div class="signup-art">
     <h2 id="signup-title">Be the first!</h2>
-    <p>New products, training dates and regulation updates. Choose your topics now, and change them whenever you like.</p>
+    <p>New products, training dates and event invitations. Choose your topics now, and change them whenever you like.</p>
   </div>
   <div class="signup-body">
     <button type="button" class="close" id="signup-close" aria-label="Close pop-up">×</button>
@@ -216,7 +190,6 @@
       </div>
       <label class="check"><input type="checkbox" id="f-consent" name="consent" required><span>Send me Signify product news and event invitations by email. I can opt out at any time.</span></label>
       <button class="btn glow" type="submit">Subscribe</button>
-      <p class="fineprint">Demo form. It stands in for the OneTrust web form.</p>
     </form>
   </div>
 </div>

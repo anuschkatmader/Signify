@@ -1,25 +1,18 @@
 <!doctype html>
-<!--
-  DEMO ENVIRONMENT, not affiliated with Signify.
-  Consent concept for a OneTrust UCPM / CMP walkthrough. Fictional persona and data only.
-  It is a labelled concept, not a copy of a Signify website: it carries no Signify logo,
-  no Signify photography, no login and no password fields. Keep the demo strip in place.
--->
+<!-- DEMO ENVIRONMENT, not affiliated with Signify. Fictional persona and data only. -->
 <html lang="en">
 <head>
+<!-- ==================== PASTE THE ONETRUST COOKIE BANNER SCRIPT HERE ==================== -->
+
+<!-- ================================ END ONETRUST SCRIPT ================================ -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Signify consent concept (demo)</title>
+<title>Signify (demo)</title>
 
-<!-- All OneTrust IDs and switches live in js/onetrust-config.js -->
+<!-- Web form IDs and switches live in js/onetrust-config.js -->
 <script src="js/onetrust-config.js"></script>
-
-<!-- Cookie banner (CMP). Keep commented out until the IDs exist, then set both REPLACE values.
-<script src="REPLACE_WITH_otSDKStub.js_URL" type="text/javascript" charset="UTF-8"
-        data-domain-script="REPLACE_WITH_DOMAIN_SCRIPT_ID"></script>
-<script type="text/javascript">function OptanonWrapper() { }</script>
--->
+<script src="js/images.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +23,8 @@
 
 <div class="strip" role="note">
   <div class="wrap">
-    <span><strong>Demo environment.</strong> Consent concept prepared for Signify. Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
+    <span><strong>Demo environment.</strong> Not a Signify website and not affiliated with Signify. <span id="strip-data">Nothing you enter leaves this page.</span></span>
     <span class="strip-tools">
-      <button type="button" data-act="replay-cookie">Show cookie banner</button>
-      <button type="button" data-act="replay-popup">Show pop-up</button>
       <button type="button" data-act="reset">Reset demo</button>
     </span>
   </div>
@@ -44,13 +35,13 @@
     <span class="market">Global - English</span>
     <a class="sub" href="#" data-dead>Careers</a>
     <a class="sub" href="#" data-dead>Investors</a>
-    <button type="button" data-act="replay-popup">Subscribe to newsletter</button>
+    <a href="#newsletter">Subscribe to newsletter</a>
   </div>
 </div>
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="index.html">Signify<small>Consent concept</small></a>
+    <a class="brand" href="index.html">Signify</a>
     <nav class="primary" aria-label="Main">
       <a href="#products">Products</a>
       <a href="#applications">Applications</a>
@@ -67,21 +58,21 @@
 
 <main>
 <div class="view on" id="view-home">
-    <section class="hero" aria-roledescription="carousel" aria-label="Illustrated scenes">
+    <section class="hero" aria-roledescription="carousel" aria-label="Scenes">
       <div class="slide on">
-        <img src="images/hero-city.svg" alt="">
+        <img src="images/hero-city.jpg" data-remote="https://images.pexels.com/photos/9920643/pexels-photo-9920643.jpeg?auto=compress&cs=tinysrgb&w=2600" data-fallback="images/hero-city.svg" onerror="nextImage(this)" alt="">
       </div>
       <div class="slide">
-        <img src="images/hero-stadium.svg" alt="">
+        <img src="images/hero-stadium.jpg" data-remote="https://images.pexels.com/photos/776805/pexels-photo-776805.jpeg?auto=compress&cs=tinysrgb&w=2600" data-fallback="images/hero-stadium.svg" onerror="nextImage(this)" alt="">
       </div>
       <div class="slide">
-        <img src="images/hero-offices.svg" alt="">
+        <img src="images/hero-offices.jpg" data-remote="https://images.pexels.com/photos/28715052/pexels-photo-28715052.jpeg?auto=compress&cs=tinysrgb&w=2600" data-fallback="images/hero-offices.svg" onerror="nextImage(this)" alt="">
       </div>
       <div class="wrap">
         <h1>A universe of lights</h1>
         <div class="cta"><a class="btn glow" href="#products">Discover the portfolio</a></div>
         <div class="hero-foot">
-          <p id="slide-caption" aria-live="polite">Illustrated scene: cities</p>
+          <p id="slide-caption" aria-live="polite">Cities</p>
           <div class="dots">
             <button type="button" aria-label="Scene 1, cities" aria-current="true"></button>
             <button type="button" aria-label="Scene 2, sports venues"></button>
@@ -95,8 +86,8 @@
       <div class="wrap">
         <h2>Discover the Signify professional portfolio</h2>
         <div class="tiles">
-          <a class="tile" href="#" data-dead><img src="images/tile-products.svg" alt=""><div><h3>Products</h3><span>Indoor and outdoor luminaires, lamps, electronics and connected lighting.</span></div></a>
-          <a class="tile" href="#applications"><img src="images/tile-applications.svg" alt=""><div><h3>Applications</h3><span>Solutions for every space, from the office to the stadium.</span></div></a>
+          <a class="tile" href="#" data-dead><img src="images/tile-products.jpg" data-remote="https://images.pexels.com/photos/1163109/pexels-photo-1163109.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fallback="images/tile-products.svg" onerror="nextImage(this)" alt=""><div><h3>Products</h3><span>Indoor and outdoor luminaires, lamps, electronics and connected lighting.</span></div></a>
+          <a class="tile" href="#applications"><img src="images/tile-applications.jpg" data-remote="https://images.pexels.com/photos/36631701/pexels-photo-36631701.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fallback="images/tile-applications.svg" onerror="nextImage(this)" alt=""><div><h3>Applications</h3><span>Solutions for every space, from the office to the stadium.</span></div></a>
         </div>
         <div class="tags" id="applications">
           <a href="#" data-dead>Cities</a><a href="#" data-dead>Education</a><a href="#" data-dead>Healthcare</a><a href="#" data-dead>Hospitality</a><a href="#" data-dead>Manufacturing</a><a href="#" data-dead>Office</a><a href="#" data-dead>Retail</a><a href="#" data-dead>Sports</a><a href="#" data-dead>Transport</a>
@@ -111,7 +102,7 @@
           <a class="btn ghost" href="#" data-dead>See all brands</a>
         </div>
         <div class="mosaic">
-          <a href="#" data-dead><img src="images/mosaic-smart-city.svg" alt=""><span>Smart city</span></a><a href="#" data-dead><img src="images/mosaic-retail-atrium.svg" alt=""><span>Retail atrium</span></a><a href="#" data-dead><img src="images/mosaic-facade.svg" alt=""><span>Facade</span></a><a href="#" data-dead><img src="images/mosaic-modern-interior.svg" alt=""><span>Modern interior</span></a><a href="#" data-dead><img src="images/mosaic-home.svg" alt=""><span>Home</span></a>
+          <a href="#" data-dead><img src="images/mosaic-smart-city.jpg" data-remote="https://images.pexels.com/photos/16705973/pexels-photo-16705973.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fallback="images/mosaic-smart-city.svg" onerror="nextImage(this)" alt=""><span>Smart city</span></a><a href="#" data-dead><img src="images/mosaic-retail-atrium.jpg" data-remote="https://images.pexels.com/photos/33803366/pexels-photo-33803366.jpeg?auto=compress&cs=tinysrgb&w=1000" data-fallback="images/mosaic-retail-atrium.svg" onerror="nextImage(this)" alt=""><span>Retail atrium</span></a><a href="#" data-dead><img src="images/mosaic-facade.jpg" data-remote="https://images.pexels.com/photos/33357681/pexels-photo-33357681.jpeg?auto=compress&cs=tinysrgb&w=1000" data-fallback="images/mosaic-facade.svg" onerror="nextImage(this)" alt=""><span>Facade</span></a><a href="#" data-dead><img src="images/mosaic-modern-interior.jpg" data-remote="https://images.pexels.com/photos/34686219/pexels-photo-34686219.jpeg?auto=compress&cs=tinysrgb&w=1000" data-fallback="images/mosaic-modern-interior.svg" onerror="nextImage(this)" alt=""><span>Modern interior</span></a><a href="#" data-dead><img src="images/mosaic-home.jpg" data-remote="https://images.pexels.com/photos/34726411/pexels-photo-34726411.jpeg?auto=compress&cs=tinysrgb&w=1000" data-fallback="images/mosaic-home.svg" onerror="nextImage(this)" alt=""><span>Home</span></a>
         </div>
       </div>
     </section>
@@ -138,7 +129,7 @@
     </section>
 
     <section class="closing">
-      <div class="a"><h2>Be the first!</h2><p>Launches, training and regulation updates, as often as you choose.</p><button type="button" class="btn glow" data-act="replay-popup">Subscribe to newsletter</button></div>
+      <div class="a" id="newsletter" data-act="open-newsletter"><h2>Be the first!</h2><p>Product launches, training dates and events, as often as you choose.</p><button type="button" class="btn glow">Subscribe to newsletter</button></div>
       <div class="b"><h2>Starting a project?</h2><p>Tell us your goals and timelines.</p><a class="btn ghost" href="#" data-dead>Let's talk about your project</a></div>
     </section>
 </div>
@@ -162,28 +153,11 @@
 
 <div class="scrim" id="scrim"></div>
 
-<!-- Built-in demo cookie banner. It hides itself once the real OneTrust banner is detected. -->
-<div class="modal" id="cookie" role="dialog" aria-modal="true" aria-labelledby="cookie-title" inert>
-  <h2 id="cookie-title">Choose your cookies</h2>
-  <p>We use necessary cookies to run this site. With your permission we also use cookies to measure visits and show relevant content. You can change this at any time under Cookie Settings in the footer.</p>
-  <div id="cookie-manage">
-    <div class="cat"><div><b>Strictly necessary</b><span class="d">Always on. The site needs these to work.</span></div><label class="switch"><input type="checkbox" checked disabled aria-label="Strictly necessary cookies"><span></span></label></div>
-    <div class="cat"><div><b>Performance</b><span class="d">Count visits and see which pages are used.</span></div><label class="switch"><input type="checkbox" id="cat-C0002" aria-label="Performance cookies"><span></span></label></div>
-    <div class="cat"><div><b>Functional</b><span class="d">Remember your country and language.</span></div><label class="switch"><input type="checkbox" id="cat-C0003" aria-label="Functional cookies"><span></span></label></div>
-    <div class="cat"><div><b>Targeting</b><span class="d">Show relevant content on other sites.</span></div><label class="switch"><input type="checkbox" id="cat-C0004" aria-label="Targeting cookies"><span></span></label></div>
-  </div>
-  <div class="cookie-acts">
-    <button type="button" class="btn ghost" id="ck-manage">Manage cookies</button>
-    <button type="button" class="btn ghost" id="ck-reject">Reject all</button>
-    <button type="button" class="btn glow" id="ck-accept">Accept all</button>
-  </div>
-</div>
-
-<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. The fallback form shows until it does. -->
+<!-- Newsletter pop-up. The OneTrust web form renders into #ot-container. -->
 <div class="modal" id="signup" role="dialog" aria-modal="true" aria-labelledby="signup-title" inert>
   <div class="signup-art">
     <h2 id="signup-title">Be the first!</h2>
-    <p>New products, training dates and regulation updates. Choose your topics now, and change them whenever you like.</p>
+    <p>New products, training dates and event invitations. Choose your topics now, and change them whenever you like.</p>
   </div>
   <div class="signup-body">
     <button type="button" class="close" id="signup-close" aria-label="Close pop-up">×</button>
@@ -198,7 +172,6 @@
       </div>
       <label class="check"><input type="checkbox" id="f-consent" name="consent" required><span>Send me Signify product news and event invitations by email. I can opt out at any time.</span></label>
       <button class="btn glow" type="submit">Subscribe</button>
-      <p class="fineprint">Demo form. It stands in for the OneTrust web form.</p>
     </form>
   </div>
 </div>

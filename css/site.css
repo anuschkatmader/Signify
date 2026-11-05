@@ -55,8 +55,8 @@ nav.primary a:hover{border-image:var(--grad) 1}
 .hero{position:relative;background:var(--ink);color:var(--white);overflow:hidden;min-height:620px;display:flex;align-items:flex-end}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity .6s}
 .slide.on{opacity:1}
-.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right bottom}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,37,48,.82) 0%,rgba(10,37,48,.4) 45%,rgba(10,37,48,0) 70%)}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,37,48,.85) 0%,rgba(10,37,48,.5) 45%,rgba(10,37,48,.1) 75%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-top:64px;padding-bottom:56px}
 .hero h1{font-size:clamp(46px,7.4vw,104px);line-height:.98;letter-spacing:-.04em;font-weight:800;max-width:9ch}
 .hero .cta{margin-top:28px}
@@ -185,16 +185,6 @@ legend{padding:0;font-size:14px;font-weight:700;margin-bottom:8px}
 /* Closed pop-ups stay full size and off-screen: the OneTrust SDK will not render into a hidden container */
 .modal{left:-300vw;top:16px}
 .modal.open{left:50%;top:50%;transform:translate(-50%,-50%)}
-#cookie{width:min(620px,calc(100vw - 32px));padding:28px}
-#cookie h2{font-size:25px;letter-spacing:-.025em;line-height:1.2;font-weight:800}
-#cookie p{margin-top:10px;color:var(--steel);font-size:16px}
-.cookie-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.cookie-acts .btn{flex:1 1 150px;font-size:16px;padding:10px 12px;white-space:nowrap}
-#cookie-manage{display:none;margin-top:18px;border-top:1px solid var(--line)}
-#cookie-manage.on{display:block}
-.cat{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.cat b{display:block;font-weight:700}
-.cat span.d{color:var(--steel);font-size:14px}
 #signup{width:min(880px,calc(100vw - 32px));display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
 .signup-art{background:var(--grad);color:var(--ink);padding:30px;min-height:100%}
 .signup-art h2{font-size:42px;line-height:1.02;letter-spacing:-.035em;font-weight:800}
@@ -213,7 +203,6 @@ legend{padding:0;font-size:14px;font-weight:700;margin-bottom:8px}
 .fields-two .field{padding-right:0}
 .check{display:flex;gap:10px;font-size:15px;align-items:flex-start;margin:6px 0 14px;line-height:1.4}
 .check input{margin-top:2px}
-.fineprint{font-size:13.5px;color:var(--steel);margin-top:10px}
 #fallback-form .btn{width:100%}
 #toast{position:fixed;left:50%;top:92px;transform:translate(-50%,-12px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:10px;z-index:90;opacity:0;pointer-events:none;transition:.2s;max-width:calc(100vw - 32px);font-size:16px}
 #toast.on{opacity:1;transform:translate(-50%,0)}
@@ -258,3 +247,4 @@ legend{padding:0;font-size:14px;font-weight:700;margin-bottom:8px}
 .tile::after,.mosaic a::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,37,48,.85),rgba(10,37,48,0) 55%)}
 .tile div,.mosaic span{position:relative;z-index:1}
 section[id],#applications{scroll-margin-top:96px}
+.closing .a{cursor:pointer}

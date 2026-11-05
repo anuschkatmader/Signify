@@ -16,7 +16,7 @@
         {id:"news",title:"Product news",desc:"New luminaires, lamps and connected systems for the sectors you work in.",on:false,level:1,channels:["Email"],status:null},
         {id:"academy",title:"Training and Lighting Academy",desc:"Course dates, webinars and certificates.",on:true,level:2,channels:["Email","SMS"],status:"Opted in 12 October 2026 · Account registration"},
         {id:"events",title:"Events and trade fairs",desc:"Invitations to events near you.",on:true,level:0,channels:["Email","Post"],status:"Reduced to quarterly 3 September 2026 · "+PC},
-        {id:"regulation",title:"Sustainability and regulation",desc:"Changes to energy rules and what they mean for your projects.",on:false,level:1,channels:["Email"],status:null},
+        {id:"regulation",title:"Sustainability",desc:"Energy-saving ideas and news on sustainable lighting.",on:false,level:1,channels:["Email"],status:null},
         {id:"offers",title:"Offers for professionals",desc:"Promotions on products you buy.",on:false,level:1,channels:["Email"],status:"Opted out 4 July 2026 · "+PC},
         {id:"research",title:"Customer research",desc:"Short surveys that help improve products and service.",on:false,level:0,channels:["Email"],status:null},
         {id:"service",title:"Service messages",desc:"Order updates, recalls and warranty notices. These can't be turned off.",on:true,level:2,channels:["Email"],status:"Required for your orders and warranties",locked:true}
@@ -34,9 +34,8 @@
   function load(){ try { var r = sessionStorage.getItem(STORE); return r ? JSON.parse(r) : null; } catch(e){ return null; } }
   var stored = load();
   var state = stored ? stored.state : seed(), saved = JSON.stringify(state.purposes);
-  var cookieGroups = stored ? stored.cookieGroups : null;
   function persist(){
-    try { sessionStorage.setItem(STORE,JSON.stringify({state:state,popupShown:popupShown,cookieGroups:cookieGroups})); } catch(e){}
+    try { sessionStorage.setItem(STORE,JSON.stringify({state:state})); } catch(e){}
   }
 
   /* ---------- Toast ---------- */
@@ -47,7 +46,7 @@
   }
 
   /* ---------- Hero scenes ---------- */
-  var CAPTIONS = ["Illustrated scene: cities","Illustrated scene: sports venues","Illustrated scene: offices"];
+  var CAPTIONS = ["Cities","Sports","Offices"];
   $$(".dots button").forEach(function(d,i,all){
     d.addEventListener("click",function(){
       $$(".slide").forEach(function(s,j){ s.classList.toggle("on",i===j); });
@@ -183,63 +182,11 @@
     if(e.key==="Escape" && $("#signup").classList.contains("open")) closeModals();
   });
 
-  /* ---------- Demo cookie banner ---------- */
-  var COOKIE_KEY = "C0002,C0003,C0004";
-  // Checks for the CMP itself. The web form SDK can also define window.OneTrust, so that alone proves nothing.
-  var realCmpPresent = function(){
-    return !!($("#onetrust-banner-sdk") || $("#onetrust-consent-sdk") || (window.OneTrust && typeof window.OneTrust.ToggleInfoDisplay === "function"));
-  };
-  var cmpScriptPasted = !!$('script[data-domain-script]');
-  var firedTags = [];
-
-  function activateTags(groups){
-    $$("script[data-demo-tag]").forEach(function(tag,i){
-      var m = tag.className.match(/C\d{4}/);
-      if(m && groups.indexOf(m[0])>-1 && firedTags.indexOf(i)<0){
-        firedTags.push(i);
-        var s = document.createElement("script"); s.textContent = tag.textContent; document.body.appendChild(s);
-      }
-    });
-  }
-  function finishCookies(groups,label){
-    cookieGroups = groups; persist();
-    closeModals();
-    console.log("[Demo] Cookie choice:",label,groups);
-    activateTags(groups);
-    toast(label);
-    if(!state.signedUp && !popupShown) setTimeout(showPopupOnce,1200);
-  }
-  function showCookie(manage){
-    if(realCmpPresent()) return;
-    $("#cookie-manage").classList.toggle("on",!!manage);
-    $("#ck-manage").textContent = manage ? "Save choices" : "Manage cookies";
-    openModal("#cookie");
-  }
-  $("#ck-accept").addEventListener("click",function(){ finishCookies(COOKIE_KEY.split(","),"All cookies accepted"); });
-  $("#ck-reject").addEventListener("click",function(){ finishCookies([],"Optional cookies rejected"); });
-  $("#ck-manage").addEventListener("click",function(){
-    if(!$("#cookie-manage").classList.contains("on")){
-      $("#cookie-manage").classList.add("on"); this.textContent = "Save choices"; return;
-    }
-    var g = COOKIE_KEY.split(",").filter(function(c){ return $("#cat-"+c).checked; });
-    finishCookies(g,"Cookie choices saved");
-  });
-  $("#ot-sdk-btn").addEventListener("click",function(e){
-    e.preventDefault();
-    if(!realCmpPresent()) showCookie(true); // with the real CMP, OneTrust binds this link itself
-  });
-  new MutationObserver(function(_,obs){
-    if($("#onetrust-banner-sdk") || $("#onetrust-consent-sdk")){
-      if($("#cookie").classList.contains("open")) closeModals();
-      obs.disconnect();
-    }
-  }).observe(document.documentElement,{childList:true,subtree:true});
+  /* ---------- Footer Cookie Settings: OneTrust binds this link itself ---------- */
+  $("#ot-sdk-btn").addEventListener("click",function(e){ e.preventDefault(); });
 
   /* ---------- Newsletter pop-up and web form ---------- */
-  var popupShown = !!(stored && stored.popupShown);
-  function showPopupOnce(){ if(!popupShown && !$(".modal.open")) showPopup(); }
   function showPopup(){
-    popupShown = true; persist();
     openModal("#signup");
     installOnce();
   }
@@ -302,21 +249,16 @@
     if(a){ e.preventDefault(); toast("This link isn't part of the demo."); return; }
     var b = e.target.closest("[data-act]");
     if(!b) return;
-    if(b.dataset.act==="replay-popup") showPopup();
-    if(b.dataset.act==="replay-cookie") showCookie(false);
+    if(b.dataset.act==="open-newsletter") showPopup();
     if(b.dataset.act==="reset"){
-      state = seed(); saved = JSON.stringify(state.purposes); popupShown = false; cookieGroups = null; firedTags = [];
+      state = seed(); saved = JSON.stringify(state.purposes); 
       try { sessionStorage.removeItem(STORE); } catch(err){}
       closeModals(); $("#fallback-form").reset();
       renderPurposes(); renderReceipts(); renderOverview(); markDirty();
-      showCookie(false);
       toast("Demo reset.");
     }
   });
 
   /* ---------- Start ---------- */
   renderPurposes(); renderReceipts(); renderOverview(); markDirty(); route();
-  if(cmpScriptPasted){ setTimeout(showPopupOnce,2500); }
-  else if(cookieGroups){ activateTags(cookieGroups); if(!state.signedUp && !popupShown) setTimeout(showPopupOnce,1200); }
-  else { setTimeout(function(){ showCookie(false); },500); }
 })();
